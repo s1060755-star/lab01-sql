@@ -30,9 +30,8 @@ SELECT * FROM customers;
 ![task_1_1](./screenshots/task_1_1.png)
 Отримано всі записи клієнтів, включаючи як фізичних осіб, так і юридичні особи.
 
-
-...
  1.2. Вивести тільки назви товарів і їхні ціни з таблиці products
+ 
  ```sql
  -- Отримання каталогу товарів із зазначенням вартості
 SELECT product_name, unit_price FROM products;
