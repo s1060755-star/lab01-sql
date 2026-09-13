@@ -234,18 +234,6 @@ SELECT order_id, order_date, customer_id FROM orders ORDER BY order_date DESC LI
 ![task_2_12](./screenshots/task_2_12.png)
 Успішно реалізовано механізм сторінкового виводу (пагінації).
 
-### Отримати всі записи з таблиці customers.
-
-```sql
-SELECT * FROM customers;
-```
-
-Результат: Отримано 15 записів клієнтів, включаючи як фізичних осіб, так і юридичні особи з різних міст України.
-
-![tables_list](./screenshots/tables_list.png)
-
-
-
 ## Висновки
 Самооцінка: 4 (Достатній рівень)
 
