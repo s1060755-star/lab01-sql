@@ -37,7 +37,7 @@ SELECT * FROM customers;
 SELECT product_name, unit_price FROM products;
 ```
 ![task_1_2](./screenshots/task_1_2.png)
- Отримано перелік товарів із зазначенням їхньої ціни.
+Отримано перелік товарів із зазначенням їхньої ціни.
 
  1.3. Показати контактні дані всіх співробітників
  ```sql
