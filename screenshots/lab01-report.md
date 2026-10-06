@@ -18,7 +18,7 @@
 SELECT * FROM customers;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_1](screenshots/task_1_1.png.)
+![Результат task_1_1](task_1_1.png.png)
 
 *Пояснення:* Я успішно вивела всі рядки з таблиці клієнтів. Я помітила, що роздрібні покупці мають значення `NULL` у полі `company_name`.
 
@@ -36,8 +36,7 @@ SELECT product_name, unit_price FROM products;
 SELECT first_name, last_name, phone, email FROM employees;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_3](screenshots/task_1_3.png.png)
-
+ ![Результат task_1_3](task_1_3.png.png)
 *Пояснення:* Запит дозволив мені створити внутрішній довідник із контактними даними працівників.
 
 #### Завдання 1.4: Вибірка клієнтів із міста Київ (task_1_4)
@@ -45,8 +44,7 @@ SELECT first_name, last_name, phone, email FROM employees;
 SELECT * FROM customers WHERE city = 'Київ';
 ```
 *Результат виконання:*  
-![Результат виконання task_1_4](screenshots/task_1_4.png.png)
-
+![Результат task_1_4](task_1_4.png.png)
 *Пояснення:* Завдяки фільтрації я відібрала тільки тих контрагентів, які зареєстровані в Києві.
 
 #### Завдання 1.5: Пошук товарів, ціна яких перевищує 25000 грн (task_1_5)
@@ -54,8 +52,7 @@ SELECT * FROM customers WHERE city = 'Київ';
 SELECT product_name, unit_price FROM products WHERE unit_price > 25000;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_5](screenshots/task_1_5.png.png)
-
+![Результат task_1_5](task_1_5.png.png)
 *Пояснення:* Я успішно відсіяла дешеві позиції, залишивши у вибірці виключно преміум-сегмент техніки.
 
 #### Завдання 1.6: Визначення замовлень, які вже були відправлені (task_1_6)
@@ -63,7 +60,7 @@ SELECT product_name, unit_price FROM products WHERE unit_price > 25000;
 SELECT order_id, customer_id, order_date, shipped_date FROM orders WHERE shipped_date IS NOT NULL;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_6](screenshots/task_1_6.png.png)
+ ![Результат task_1_6](task_1_6.png.png)
 
 *Пояснення:* За допомогою перевірки на `IS NOT NULL` я відібрала замовлення, які вже пройшли логістичну відправку.
 
@@ -72,7 +69,7 @@ SELECT order_id, customer_id, order_date, shipped_date FROM orders WHERE shipped
 SELECT first_name, last_name, title FROM employees WHERE title ILIKE '%продаж%';
 ```
 *Результат виконання:*  
-![Результат виконання task_1_7](screenshots/task_1_7.png.png)
+ ![Результат task_1_7](task_1_7.png.png)
 
 *Пояснення:* Я застосувала оператор `ILIKE` для пошуку працівників відділу продажів без урахування регістру літер.
 
@@ -81,7 +78,7 @@ SELECT first_name, last_name, title FROM employees WHERE title ILIKE '%прод�
 SELECT product_name, unit_price FROM products ORDER BY unit_price ASC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_8](screenshots/task_1_8.png.png)
+ ![Результат task_1_8](task_1_8.png.png)
 
 *Пояснення:* Я впорядкувала весь каталог товарів від найдешевших аксесуарів до найдорожчих ноутбуків.
 
@@ -90,8 +87,7 @@ SELECT product_name, unit_price FROM products ORDER BY unit_price ASC;
 SELECT contact_name, city, phone FROM customers ORDER BY contact_name ASC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_9](screenshots/task_1_9.png.png)
-
+![Результат task_1_9](task_1_9.png.png)
 *Пояснення:* Я структурувала список клієнтів за алфавітним порядком їхніх імен (від А до Я).
 
 #### Завдання 1.10: Сортування замовлень за датою від найновіших (task_1_10)
@@ -99,7 +95,7 @@ SELECT contact_name, city, phone FROM customers ORDER BY contact_name ASC;
 SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY order_date DESC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_10](screenshots/task_1_10.png.png)
+ ![Результат task_1_10](task_1_10.png.png)
 
 *Пояснення:* Я відсортувала замовлення, щоб першими бачити останні операційні транзакції магазину.
 
@@ -108,8 +104,7 @@ SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY orde
 SELECT product_name, unit_price FROM products ORDER BY unit_price DESC LIMIT 10;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_11](screenshots/task_1_11.png.png)
-
+![Результат task_1_11](task_1_11.png.png)
 *Пояснення:* Поєднавши сортування за спаданням та оператор `LIMIT 10`, я вивела десятку найдорожчих позицій.
 
 #### Завдання 1.12: Обмеження кількості найновіших замовлень (task_1_12)
@@ -117,8 +112,7 @@ SELECT product_name, unit_price FROM products ORDER BY unit_price DESC LIMIT 10;
 SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY order_date DESC LIMIT 5;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_12](screenshots/task_1_12.png.png)
-
+: ![Результат task_1_12](task_1_12.png.png)
 *Пояснення:* Я обмежила вибірку до 5 останніх оформлених замовлень для швидкого перегляду на панелі приладів.
 
 #### Завдання 1.13: Сортування клієнтів за алфавітом з лімітом (task_1_13)
@@ -126,8 +120,7 @@ SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY orde
 SELECT contact_name, city FROM customers ORDER BY contact_name ASC LIMIT 8;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_13](screenshots/task_1_13.png.png)
-
+![Результат task_1_13](task_1_13.png.png)
 *Пояснення:* Я вивела перші 8 клієнтів за алфавітом, що є заготовкою для першої сторінки інтерфейсу.
 
 ---
@@ -141,7 +134,7 @@ FROM customers
 WHERE contact_title = 'Власник';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_1](screenshots/task_2_1.png.png)
+ ![Результат task_2_1](task_2_1.png.png)
 
 *Пояснення:* Я відфільтрувала базу даних, щоб отримати контакти безпосередніх керівників та власників компаній.
 
@@ -150,8 +143,7 @@ WHERE contact_title = 'Власник';
 SELECT product_name, unit_price FROM products WHERE product_name ILIKE '%iPhone%' OR product_name ILIKE '%телефон%';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_2](screenshots/task_2_2.png.png)
-
+ ![Результат task_2_2](task_2_2.png.png)
 *Пояснення:* Я поєднала дві текстові умови, завдяки чому отримала зведений список усіх телефонів.
 
 #### Завдання 2.3: Пошук співробітників за виключенням певних посад через NOT (task_2_3)
@@ -159,7 +151,7 @@ SELECT product_name, unit_price FROM products WHERE product_name ILIKE '%iPhone%
 SELECT first_name, last_name, title FROM employees WHERE NOT title ILIKE '%продаж%';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_3](screenshots/task_2_3.png.png)
+ ![Результат task_2_3](task_2_3.png.png)
 
 *Пояснення:* Я виключила лінійних менеджерів з продажу та сформувала перелік адміністративного персоналу.
 
@@ -168,7 +160,7 @@ SELECT first_name, last_name, title FROM employees WHERE NOT title ILIKE '%пр�
 SELECT product_name, unit_price FROM products WHERE unit_price > 15000 AND unit_price < 50000;
 ```
 *Результат виконання:*  
-![Результат виконання task_2_4](screenshots/task_2_4.png.png)
+![Результат task_2_4](task_2_4.png.png)
 
 *Пояснення:* За допомогою `AND` я задала суворі межі, відібравши техніку вартістю від 15 000 до 50 000 грн.
 
@@ -177,8 +169,7 @@ SELECT product_name, unit_price FROM products WHERE unit_price > 15000 AND unit_
 SELECT contact_name, city, customer_type FROM customers WHERE (city = 'Київ' OR city = 'Львів') AND customer_type = 'company';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_5](screenshots/task_2_5.png.png)
-
+ ![Результат task_2_5](task_2_5.png.png)
 *Пояснення:* Я використала круглі дужки, щоб оператор `OR` виконався першим, і система повернула лише компанії з Києва чи Львова.
 
 #### Завдання 2.6: Комплексна фільтрація за категоріями та лімітом ціни (task_2_6)
@@ -186,7 +177,7 @@ SELECT contact_name, city, customer_type FROM customers WHERE (city = 'Київ'
 SELECT product_name, category_id, unit_price FROM products WHERE (category_id = 1 OR category_id = 3) AND unit_price < 10000;
 
 *Результат виконання:*  
-![Результат виконання task_2_6](screenshots/task_2_6.png.png)
+ ![Результат task_2_6](task_2_6.png.png)
 
 *Пояснення:* Запит дозволив мені знайти бюджетні товари (до 10 000 грн) із першої та третьої категорій.
 
@@ -195,7 +186,7 @@ sql
 SELECT contact_name, city FROM customers WHERE city IN ('Київ', 'Харків', 'Одеса', 'Дніпро');
 
 *Результат виконання:*  
-![Результат виконання task_2_7](screenshots/task_2_7.png.png)
+ ![Результат task_2_7](task_2_7.png.png)
 
 *Пояснення:* Я замінила довгу конструкцію з `OR` на компактний та швидкодіючий оператор `IN`.
 
@@ -204,7 +195,7 @@ sql
 SELECT product_name, unit_price FROM products WHERE unit_price BETWEEN 10000 AND 30000;
 
 *Результат виконання:*  
-![Результат виконання task_2_8](screenshots/task_2_8.png)
+ ![Результат task_2_8](task_2_8.png.png)
 
 *Пояснення:* Я використала оператор `BETWEEN` для вибірки товарів середньої вартості від 10 000 до 30 000 грн включно.
 
@@ -213,7 +204,7 @@ sql
 SELECT contact_name, company_name FROM customers WHERE company_name IS NOT NULL;
 
 *Результат виконання:*  
-![Результат виконання task_2_9](screenshots/task_2_9.png)
+ ![Результат task_2_9](task_2_9.png.png)
 
 *Пояснення:* Запит допоміг мені відсіяти роздрібних покупців та вивести тільки повноцінні фірми.
 
@@ -223,7 +214,7 @@ SELECT product_name, unit_price, units_in_stock FROM products
 WHERE (product_name ILIKE '%iPhone%' OR product_name ILIKE '%Samsung%') AND category_id IN (1, 2) AND NOT discontinued;
 ```
 Результат виконання:  
-![Результат виконання task_2_10](screenshots/task_2_10.png)
+ ![Результат task_2_10](task_2_10.png.png)
 
 Пояснення: Я поєднала пошук брендів за шаблоном, фільтрацію категорій та перевірку того, що товар є активним.
 
@@ -232,13 +223,13 @@ WHERE (product_name ILIKE '%iPhone%' OR product_name ILIKE '%Samsung%') AND cate
 sql 
 SELECT order_id, order_date, shipped_date FROM orders ORDER BY order_date DESC, shipped_date DESC NULLS LAST; 
 Результат виконання:
-![Результат task_2_11](screenshots/task_2_11.png)
+ ![Результат task_2_11](task_2_11.png.png)
 Пояснення: Я налаштувала сортування так, що невідвантажені замовлення (NULL) акуратно перемістилися в самий кінець вибірки.
 #### Завдання 2.12: Пошук замовлень із пагінацією та зміщенням (task_2_12)
 sql 
 SELECT order_id, order_date, customer_id FROM orders ORDER BY order_date DESC LIMIT 5 OFFSET 10; 
 Результат виконання:
- ![Результат task_2_12](screenshots/task_2_12.png)
+![Результат task_2_12](task_2_12.png.png)
 Пояснення: Я реалізувала сторінкову пагінацію: запит пропустив перші 10 замовлень та відобразив наступну п'ятірку рядків.
 ❓ Контрольні запитання (Достатній рівень)Поясніть різницю між логічними операторами AND та OR. Як впливає пріоритет операторів на результат запиту A OR B AND C?•
  Відповідь: AND вимагає одночасної істинності обох умов, а OR повертає істину, якщо виконається хоча б одна. AND має вищий пріоритет, ніж OR. Вираз A OR B AND C база виконає як A OR (B AND C). 
