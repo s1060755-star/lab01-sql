@@ -18,7 +18,7 @@
 SELECT * FROM customers;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_1](screenshots/task_1_1.png)
+![Результат виконання task_1_1](screenshots/task_1_1.png.png)
 
 *Пояснення:* Я успішно вивела всі рядки з таблиці клієнтів. Я помітила, що роздрібні покупці мають значення `NULL` у полі `company_name`.
 
@@ -27,7 +27,7 @@ SELECT * FROM customers;
 SELECT product_name, unit_price FROM products;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_2](screenshots/task_1_2.png)
+![Результат виконання task_1_2](screenshots/task_1_2.png.png)
 
 *Пояснення:* Я сформувала повний перелік товарів магазину з їхніми цінами для аналізу асортименту.
 
@@ -36,7 +36,7 @@ SELECT product_name, unit_price FROM products;
 SELECT first_name, last_name, phone, email FROM employees;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_3](screenshots/task_1_3.png)
+![Результат виконання task_1_3](screenshots/task_1_3.png.png)
 
 *Пояснення:* Запит дозволив мені створити внутрішній довідник із контактними даними працівників.
 
@@ -45,7 +45,7 @@ SELECT first_name, last_name, phone, email FROM employees;
 SELECT * FROM customers WHERE city = 'Київ';
 ```
 *Результат виконання:*  
-![Результат виконання task_1_4](screenshots/task_1_4.png)
+![Результат виконання task_1_4](screenshots/task_1_4.png.png)
 
 *Пояснення:* Завдяки фільтрації я відібрала тільки тих контрагентів, які зареєстровані в Києві.
 
@@ -54,7 +54,7 @@ SELECT * FROM customers WHERE city = 'Київ';
 SELECT product_name, unit_price FROM products WHERE unit_price > 25000;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_5](screenshots/task_1_5.png)
+![Результат виконання task_1_5](screenshots/task_1_5.png.png)
 
 *Пояснення:* Я успішно відсіяла дешеві позиції, залишивши у вибірці виключно преміум-сегмент техніки.
 
@@ -63,7 +63,7 @@ SELECT product_name, unit_price FROM products WHERE unit_price > 25000;
 SELECT order_id, customer_id, order_date, shipped_date FROM orders WHERE shipped_date IS NOT NULL;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_6](screenshots/task_1_6.png)
+![Результат виконання task_1_6](screenshots/task_1_6.png.png)
 
 *Пояснення:* За допомогою перевірки на `IS NOT NULL` я відібрала замовлення, які вже пройшли логістичну відправку.
 
@@ -72,7 +72,7 @@ SELECT order_id, customer_id, order_date, shipped_date FROM orders WHERE shipped
 SELECT first_name, last_name, title FROM employees WHERE title ILIKE '%продаж%';
 ```
 *Результат виконання:*  
-![Результат виконання task_1_7](screenshots/task_1_7.png)
+![Результат виконання task_1_7](screenshots/task_1_7.png.png)
 
 *Пояснення:* Я застосувала оператор `ILIKE` для пошуку працівників відділу продажів без урахування регістру літер.
 
@@ -81,7 +81,7 @@ SELECT first_name, last_name, title FROM employees WHERE title ILIKE '%прод�
 SELECT product_name, unit_price FROM products ORDER BY unit_price ASC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_8](screenshots/task_1_8.png)
+![Результат виконання task_1_8](screenshots/task_1_8.png.png)
 
 *Пояснення:* Я впорядкувала весь каталог товарів від найдешевших аксесуарів до найдорожчих ноутбуків.
 
@@ -90,7 +90,7 @@ SELECT product_name, unit_price FROM products ORDER BY unit_price ASC;
 SELECT contact_name, city, phone FROM customers ORDER BY contact_name ASC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_9](screenshots/task_1_9.png)
+![Результат виконання task_1_9](screenshots/task_1_9.png.png)
 
 *Пояснення:* Я структурувала список клієнтів за алфавітним порядком їхніх імен (від А до Я).
 
@@ -99,7 +99,7 @@ SELECT contact_name, city, phone FROM customers ORDER BY contact_name ASC;
 SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY order_date DESC;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_10](screenshots/task_1_10.png)
+![Результат виконання task_1_10](screenshots/task_1_10.png.png)
 
 *Пояснення:* Я відсортувала замовлення, щоб першими бачити останні операційні транзакції магазину.
 
@@ -108,7 +108,7 @@ SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY orde
 SELECT product_name, unit_price FROM products ORDER BY unit_price DESC LIMIT 10;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_11](screenshots/task_1_11.png)
+![Результат виконання task_1_11](screenshots/task_1_11.png.png)
 
 *Пояснення:* Поєднавши сортування за спаданням та оператор `LIMIT 10`, я вивела десятку найдорожчих позицій.
 
@@ -117,7 +117,7 @@ SELECT product_name, unit_price FROM products ORDER BY unit_price DESC LIMIT 10;
 SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY order_date DESC LIMIT 5;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_12](screenshots/task_1_12.png)
+![Результат виконання task_1_12](screenshots/task_1_12.png.png)
 
 *Пояснення:* Я обмежила вибірку до 5 останніх оформлених замовлень для швидкого перегляду на панелі приладів.
 
@@ -126,7 +126,7 @@ SELECT order_id, order_date, customer_id, shipped_date FROM orders ORDER BY orde
 SELECT contact_name, city FROM customers ORDER BY contact_name ASC LIMIT 8;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_13](screenshots/task_1_13.png)
+![Результат виконання task_1_13](screenshots/task_1_13.png.png)
 
 *Пояснення:* Я вивела перші 8 клієнтів за алфавітом, що є заготовкою для першої сторінки інтерфейсу.
 
@@ -141,7 +141,7 @@ FROM customers
 WHERE contact_title = 'Власник';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_1](screenshots/task_2_1.png)
+![Результат виконання task_2_1](screenshots/task_2_1.png.png)
 
 *Пояснення:* Я відфільтрувала базу даних, щоб отримати контакти безпосередніх керівників та власників компаній.
 
@@ -150,7 +150,7 @@ WHERE contact_title = 'Власник';
 SELECT product_name, unit_price FROM products WHERE product_name ILIKE '%iPhone%' OR product_name ILIKE '%телефон%';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_2](screenshots/task_2_2.png)
+![Результат виконання task_2_2](screenshots/task_2_2.png.png)
 
 *Пояснення:* Я поєднала дві текстові умови, завдяки чому отримала зведений список усіх телефонів.
 
@@ -159,7 +159,7 @@ SELECT product_name, unit_price FROM products WHERE product_name ILIKE '%iPhone%
 SELECT first_name, last_name, title FROM employees WHERE NOT title ILIKE '%продаж%';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_3](screenshots/task_2_3.png)
+![Результат виконання task_2_3](screenshots/task_2_3.png.png)
 
 *Пояснення:* Я виключила лінійних менеджерів з продажу та сформувала перелік адміністративного персоналу.
 
@@ -168,7 +168,7 @@ SELECT first_name, last_name, title FROM employees WHERE NOT title ILIKE '%пр�
 SELECT product_name, unit_price FROM products WHERE unit_price > 15000 AND unit_price < 50000;
 ```
 *Результат виконання:*  
-![Результат виконання task_2_4](screenshots/task_2_4.png)
+![Результат виконання task_2_4](screenshots/task_2_4.png.png)
 
 *Пояснення:* За допомогою `AND` я задала суворі межі, відібравши техніку вартістю від 15 000 до 50 000 грн.
 
@@ -177,7 +177,7 @@ SELECT product_name, unit_price FROM products WHERE unit_price > 15000 AND unit_
 SELECT contact_name, city, customer_type FROM customers WHERE (city = 'Київ' OR city = 'Львів') AND customer_type = 'company';
 ```
 *Результат виконання:*  
-![Результат виконання task_2_5](screenshots/task_2_5.png)
+![Результат виконання task_2_5](screenshots/task_2_5.png.png)
 
 *Пояснення:* Я використала круглі дужки, щоб оператор `OR` виконався першим, і система повернула лише компанії з Києва чи Львова.
 
@@ -186,7 +186,7 @@ SELECT contact_name, city, customer_type FROM customers WHERE (city = 'Київ'
 SELECT product_name, category_id, unit_price FROM products WHERE (category_id = 1 OR category_id = 3) AND unit_price < 10000;
 
 *Результат виконання:*  
-![Результат виконання task_2_6](screenshots/task_2_6.png)
+![Результат виконання task_2_6](screenshots/task_2_6.png.png)
 
 *Пояснення:* Запит дозволив мені знайти бюджетні товари (до 10 000 грн) із першої та третьої категорій.
 
@@ -195,7 +195,7 @@ sql
 SELECT contact_name, city FROM customers WHERE city IN ('Київ', 'Харків', 'Одеса', 'Дніпро');
 
 *Результат виконання:*  
-![Результат виконання task_2_7](screenshots/task_2_7.png)
+![Результат виконання task_2_7](screenshots/task_2_7.png.png)
 
 *Пояснення:* Я замінила довгу конструкцію з `OR` на компактний та швидкодіючий оператор `IN`.
 
