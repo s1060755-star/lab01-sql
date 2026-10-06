@@ -27,7 +27,7 @@ SELECT * FROM customers;
 SELECT product_name, unit_price FROM products;
 ```
 *Результат виконання:*  
-![Результат виконання task_1_2](screenshots/task_1_2.png.png)
+(task_1_2.png.png)
 
 *Пояснення:* Я сформувала повний перелік товарів магазину з їхніми цінами для аналізу асортименту.
 
