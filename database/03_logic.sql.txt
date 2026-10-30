@@ -1,0 +1,12 @@
+-- Створення подання для зручного перегляду каталогу книг
+CREATE OR REPLACE VIEW view_catalog AS
+SELECT 
+    b.book_id,
+    b.title,
+    CONCAT(a.first_name, ' ', a.last_name) AS author,
+    g.genre_name,
+    b.price,
+    b.stock_quantity
+FROM books b
+JOIN authors a ON b.author_id = a.author_id
+JOIN genres g ON b.genre_id = g.genre_id;
